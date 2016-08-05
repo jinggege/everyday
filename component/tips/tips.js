@@ -43,7 +43,7 @@ Tips.prototype = {
 
     switch(options.direction){
       case "t":
-        tip.attr("style","top:"+(-1*(parentH+tipH))+"px;");
+        tipEle.attr("style","top:"+(-1*parentH)+"px;");
         break
       case "r":
 
