@@ -1,11 +1,48 @@
 <html>
 
   <head>
-      <link rel="stylesheel" href="../base/css/base.css"   />
+      <meta charset="utf-8"/>
+      <meta name="renderer" content="webkit"/>
+      <link rel="stylesheet" type="text/css" href="../base/css/base.css"   />
+      <script type="text/javascript" src="../base/js/jquery.js"></script>
+      <script type="text/javascript" src="./tips.js"></script>
   </head>
   <title>test tips</title>
-  <body>
 
+<style type="text/css">
+    .MJ-border1{border:1px solid #cccccc; border-radius: 5px;}
+    .container{width: 500px; height:300px;margin: 30px auto;}
+    .container .con-nav{width: 300px; height: 30px; margin: auto; border-bottom: 1px solid #cccccc;}
+    .container .con-nav li{float: left;}
+    .container .con-nav span{display:block; width: 60px; line-height: 30px; margin 0 10px; cursor: pointer; color: #289CD5; text-align: center;}
+
+    .MJ-TIP-panel{width: 200px; height: 30px; background: #000000; color: #FFFFFF; font-size: 12px; border-radius: 5px; position: relative;}
+
+</style>
+
+
+  <body>
+    <div class="MJ-border1 container">
+      <div class="con-nav clearfix">
+        <ul>
+            <li><span id="NAV_1">来疯</span></li>
+            <li><span id="NAV_2">来疯</span></li>
+            <li><span id="NAV_3">来疯</span></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      (function(){
+        var t = new Tips();
+
+        t.show({ele:$('#NAV_1'),msg:"首页首页",direction:"t"});
+        t.show({ele:$('#NAV_2'),msg:"全民直播",direction:2});
+        t.show({ele:$('#NAV_3'),msg:"娱乐互动",direction:3});
+      })()
+
+    </script>
 
 
   </body>
