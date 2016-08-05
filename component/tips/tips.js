@@ -62,7 +62,7 @@ Tips.prototype = {
 
   getEleWidth:function(ele){
       return Number(ele.css("width").replace("px",""));
-  }
+  },
 
   getEleHeight:function(ele){
       return Number(ele.css("height").replace("px",""));
