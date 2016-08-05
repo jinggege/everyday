@@ -33,16 +33,20 @@ Tips.prototype = {
   },
 
   setTipsDir:function(options){
-    var tip = $("#"+options.tipId);
-    var tW = Number(options.ele.css('width').replace("px",""));
-    var tH = Number(options.ele.css('height').replace("px",""))-30;
-    console.log(tH);
+    var tipEle = $("#"+options.tipId);
+    var parentW = this.getEleWidth(options.ele);
+    var parentH = this.getEleHeight(options.ele);
+
+    var tipW = this.getEleWidth(tipEle);
+    var tipH = this.getEleHeight(tipEle);
+
 
     switch(options.direction){
       case "t":
-        tip.attr("style","top:-"+tH+"px;");
+        tip.attr("style","top:"+(-1*(parentH+tipH))+"px;");
         break
       case "r":
+
         //tip.attr("style","top:-"+tH+"px;");
         break
       case "b":
