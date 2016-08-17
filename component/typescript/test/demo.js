@@ -1,0 +1,10 @@
+console.log("-------------字符串声明--------------");
+var fName = "laifeng";
+var desc = "this is " + fName;
+console.log("模板字符串:", desc);
+console.log("-------------数组声明--------------");
+var arrNum = [1, 2, 3];
+var arrStr = ["x1", "x2"];
+console.log(arrNum, arrStr);
+var arr = [1, 2, 3];
+console.log(arr);

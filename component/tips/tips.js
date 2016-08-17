@@ -57,7 +57,7 @@ Tips.prototype = {
   createDom:function(tipId,msg) {
     var html = "";
     html += '<div id="'+tipId+'" class="MJ-TIP-panel">';
-      html +='<p class="MJ-TIP-label">'+msg+'</div>';
+    html +=   '<p class="MJ-TIP-label">'+msg+'</div>';
     html += '</div>';
     return html;
   },

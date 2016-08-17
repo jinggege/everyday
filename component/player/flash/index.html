@@ -1,0 +1,109 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+
+  <link  type="text/css" rel="stylesheet"  href="./base.css" />
+  <script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./swfobject.js"></script>
+  <script type="text/javascript" src="./api.js"></script>
+
+  <title>flash player</title>
+</head>
+
+<style type="text/css">
+
+  .P-con{width: 100%; height:100%; margin: 5px;}
+  .P-con .P-left{float:left;width: 300px; height:500px; border: 1px solid #CCCCCC; border-radius: 2px; background: #f5f5f5;}
+  .P-con .P-right{float:left;width: 500px; height:500px; border: 1px solid #CCCCCC; border-radius: 2px; margin: 0 0 0 10px;}
+
+  .P-con .P-left .player-panel{width: 270px; height: 480px; margin:10px auto; background: #000000;}
+
+  .P-right .player-status{display: inline-block; margin: 5px 0 0 5px; border-bottom: 1px solid #f5f5f5;}
+  .P-right .player-status .in-txt{
+      display: inline-block; width: 190px;height: 30px; line-height: 40px\9; line-height: 30px;  background: #FFFFFF;
+       border: 1px solid #ccc;  vertical-align: middle; border-radius: 4px; padding:0 0 0 5px;
+  }
+
+  .P-right .player-info{width: 500px; height: 50px;}
+  .player-info span{color: #d9534f; margin: 5px 0 0 5px;}
+
+  .P-right .player-status .btn-live{
+      display: inline-block; width: 70px; line-height: 30px; color: #FFFFFF; text-align: center;
+      font-size: 12px; border-radius:5px; cursor: pointer; font-weight: bold;
+    }
+
+  .P-right .player-status .btn-live-play{background: #5cb85c; border-color: #4cae4c; margin: 10px 10px;}
+  .P-right .player-status .btn-live-stop{background: #d9534f; border-color: #d43f3a; margin: 10px 10px;}
+
+  .P-right .barrage-status{display: inline-block;width: 500px; height: 60px;margin: 10px 0 0 5px; border-bottom: 1px solid #f5f5f5; }
+  .P-right .barrage-status .b-type-con{height: 30px;}
+  .P-right .barrage-status .btn-barrage-send{
+      display: inline-block;width: 70px;line-height: 30px;background: #31b0d5; border-color: #269abc; margin: 10px 10px;border-radius:5px;
+      text-align: center; color: #FFFFFF; cursor: pointer; font-weight:bold;
+    }
+
+
+
+</style>
+
+
+<body>
+  <div class="P-con clearfix">
+    <div class="P-left">
+        <div class="player-panel">
+            <div id="ELE_player">
+            </div>
+        </div>
+    </div>
+
+    <div class="P-right">
+        <div class="player-info">
+          <span id="P_msg"></span>
+        </div>
+
+
+        <div class="player-status">
+            <label>token:</label>
+            <input type="text" id="IN_token" class="in-txt in-token" value="98765"   />
+            <label>alias:</label>
+            <input type="text" id="IN_alias" class="in-txt in-alias"   />
+            <span class="btn-live btn-live-play">play</span>
+            <span class="btn-live btn-live-stop">stop</span>
+        </div>
+
+        <div class="barrage-status">
+          <div class="b-type-con">
+              <label>chat</label>
+              <input type="radio" name="rb" class="rb" value="1"  checked="true"/>
+              <label>horn</label>
+              <input type="radio" name="rb" class="rb"  value="2" />
+              <span class="btn-barrage-send">send</span>
+          </div>
+
+        </div>
+
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+
+    $(document).ready(function(){
+      (function(){
+        var api = new Api();
+        api.init();
+      })()
+
+
+    });
+
+
+  </script>
+
+
+
+</body>
+
+</html>
